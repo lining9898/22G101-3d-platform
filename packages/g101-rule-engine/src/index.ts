@@ -83,6 +83,7 @@ export function matchesCondition(
   if (condition.operator === 'all') return condition.conditions.every((part) => matchesCondition(part, values));
   if (condition.operator === 'any') return condition.conditions.some((part) => matchesCondition(part, values));
   if (condition.operator === 'not') return !matchesCondition(condition.condition, values);
+  if (!('parameter' in condition)) throw new RuleResolutionError('unsupported rule condition');
   const actual = values[condition.parameter];
   if (actual === undefined) throw new RuleResolutionError(`missing condition parameter: ${condition.parameter}`);
   if (typeof actual !== typeof condition.value) throw new RuleResolutionError(`condition type mismatch: ${condition.parameter}`);

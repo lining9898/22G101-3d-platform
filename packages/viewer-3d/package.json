@@ -1,0 +1,9 @@
+{
+  "name": "@g101/viewer-3d",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": { "@g101/geometry-engine": "0.0.0", "three": "^0.180.0" },
+  "devDependencies": { "@types/three": "^0.180.0" }
+}

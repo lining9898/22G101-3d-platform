@@ -1,0 +1,7 @@
+{
+  "name": "@g101/schemas",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts", "./domain": "./src/domain.ts", "./evidence": "./src/evidence.ts" }
+}

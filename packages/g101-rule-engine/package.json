@@ -1,0 +1,8 @@
+{
+  "name": "@g101/g101-rule-engine",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": { "@g101/schemas": "0.0.0" }
+}

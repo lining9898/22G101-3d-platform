@@ -141,3 +141,15 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Licensed or private atlas materials must never enter the public repository.
+private-data/
+source-pdf/
+atlas-pdf/
+copyright-source/
+**/private-data/
+**/source-pdf/
+**/atlas-pdf/
+**/copyright-source/
+*.pdf
+*.PDF
