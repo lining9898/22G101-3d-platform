@@ -27,7 +27,8 @@ describe('verified rule coverage gate', () => {
     expect(verifyRuleCoverage(root)).toEqual({ checked: 0, verified: 0, errors: [] });
   });
   it('requires a named test for a VERIFIED rule', () => {
-    expect(verifyRuleCoverage(fixture({ id: 'sample', status: 'VERIFIED' })).errors).toContain(
+    const [error] = verifyRuleCoverage(fixture({ id: 'sample', status: 'VERIFIED' })).errors;
+    expect(error.replace(/\\/g, '/')).toBe(
       'data/22g101/rules/beam/fixture.json: VERIFIED rule sample requires tests/verified-rules/sample.test.ts',
     );
   });
