@@ -1,0 +1,74 @@
+:root {
+  font-family: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  color: #172e48;
+  background: #eef4fa;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.app-shell { min-height: 100vh; padding: 18px 24px 24px; max-width: 1800px; margin: auto; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 74px; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-mark { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; background: #1265bc; color: white; font-size: 26px; font-weight: 800; }
+.brand h1 { margin: 3px 0 0; font-size: 20px; letter-spacing: .02em; }
+.eyebrow { margin: 0; color: #6890b8; font-size: 10px; font-weight: 750; letter-spacing: .13em; }
+.stage-badge, .status-chip { border-radius: 99px; white-space: nowrap; font-size: 12px; font-weight: 700; }
+.stage-badge { padding: 9px 13px; background: #dbeaff; color: #195588; }
+.notice { border: 1px solid #b5d1e9; border-radius: 12px; padding: 10px 14px; margin: 12px 0 16px; background: #e8f4ff; color: #23527e; font-size: 13px; line-height: 1.55; }
+.workspace { display: grid; grid-template-columns: minmax(180px, 220px) minmax(380px, 1fr) minmax(268px, 318px); gap: 16px; min-height: calc(100vh - 164px); }
+.panel { background: white; border: 1px solid #dae5ef; border-radius: 17px; box-shadow: 0 5px 24px #24517b0b; min-width: 0; }
+.panel-title { color: #667e98; font-weight: 750; font-size: 12px; letter-spacing: .05em; }
+.panel-title span { color: #1265bc; margin-right: 8px; }
+.sidebar, .inspector { padding: 20px 16px; }
+.component-list { display: grid; gap: 6px; margin: 18px 0; }
+.component { width: 100%; border: 0; border-radius: 11px; padding: 10px 11px; display: flex; align-items: center; gap: 11px; text-align: left; background: transparent; color: #49627c; font-weight: 650; }
+.component:hover { background: #f3f8fe; }
+.component.active { background: #e8f2ff; color: #145da8; }
+.component-glyph { width: 30px; height: 30px; display: grid; place-items: center; background: #f0f5fb; border-radius: 8px; font-size: 13px; }
+.active .component-glyph { color: white; background: #1c72cf; }
+.component-arrow { margin-left: auto; font-size: 20px; }
+.sidebar-note { margin-top: 24px; padding: 14px; background: #f7fafd; border-radius: 10px; color: #7b8ea2; font-size: 12px; line-height: 1.65; }
+.viewport { display: flex; flex-direction: column; overflow: hidden; }
+.viewport-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 22px 16px; }
+.viewport h2 { font-size: 17px; margin: 9px 0 0; }
+.status-chip { background: #f0f4f9; color: #6d8196; padding: 7px 10px; }
+.canvas-placeholder { position: relative; flex: 1; min-height: 380px; overflow: hidden; background: linear-gradient(155deg, #f7fbff 0%, #eaf2f9 75%); display: grid; place-items: center; }
+.grid-plane { position: absolute; inset: 0; opacity: .45; background-image: linear-gradient(#bdd1e4 1px, transparent 1px), linear-gradient(90deg, #bdd1e4 1px, transparent 1px); background-size: 34px 34px; mask-image: linear-gradient(transparent 2%, #000 70%); transform: perspective(600px) rotateX(48deg) scale(1.5); transform-origin: center 70%; }
+.empty-model { position: relative; z-index: 1; padding: 26px; max-width: 400px; text-align: center; background: #fffffff2; border: 1px solid #dbe8f2; border-radius: 18px; box-shadow: 0 16px 45px #3a63801c; display: grid; justify-items: center; gap: 12px; }
+.model-icon { width: 64px; height: 64px; display: grid; place-items: center; border-radius: 17px; background: #e8f3ff; color: #2772b5; font-size: 42px; line-height: 1; }
+.empty-model strong { font-size: 17px; }
+.empty-model span { font-size: 12px; color: #72869a; line-height: 1.6; }
+.axis-mark { position: absolute; bottom: 18px; left: 22px; color: #7f99ae; font-size: 11px; font-weight: 800; letter-spacing: .15em; }
+.viewport-footer { display: flex; justify-content: space-between; gap: 10px; padding: 15px 22px; color: #7c91a7; font-size: 12px; }
+.inspector-section { border-bottom: 1px solid #e6edf4; padding: 17px 0 20px; }
+.inspector-section:last-child { border-bottom: 0; }
+.inspector h2 { margin: 0 0 10px; font-size: 15px; }
+.inspector h2 small { color: #7b95ae; font-size: 11px; font-weight: 500; margin-left: 5px; }
+.helper, .evidence p { color: #6f8498; font-size: 12px; line-height: 1.65; }
+.helper { margin: 0 0 15px; }
+.inspector label { margin: 14px 0 6px; display: flex; justify-content: space-between; color: #516a83; font-size: 12px; }
+.inspector label span { color: #829ab0; }
+.inspector input { display: block; width: 100%; padding: 10px 12px; border: 1px solid #d5e2ed; border-radius: 9px; outline-color: #1d75cf; color: #294766; background: #fbfdff; }
+.empty-state { padding: 14px; background: #f7fafd; border-radius: 10px; color: #8293a5; font-size: 12px; line-height: 1.65; }
+.evidence-heading { display: flex; justify-content: space-between; gap: 8px; align-items: start; }
+.evidence-heading span { padding: 5px 7px; background: #fff3dc; color: #9b6813; border-radius: 7px; font-size: 10px; font-weight: 800; }
+@media (max-width: 1050px) { .workspace { grid-template-columns: 180px minmax(0, 1fr); } .inspector { grid-column: 2; } .viewport { min-height: 540px; } }
+@media (max-width: 690px) {
+  .app-shell { padding: 12px; }
+  .topbar { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .brand h1 { font-size: 16px; }
+  .stage-badge { align-self: flex-start; }
+  .workspace { display: flex; flex-direction: column; gap: 12px; }
+  .sidebar { padding: 15px 12px; }
+  .component-list { display: flex; overflow-x: auto; gap: 7px; margin: 11px 0 0; padding-bottom: 4px; scroll-snap-type: x proximity; }
+  .component { width: auto; flex: 0 0 auto; padding: 7px 10px; scroll-snap-align: start; }
+  .component-glyph, .component-arrow, .sidebar-note { display: none; }
+  .viewport { min-height: 430px; }
+  .viewport-header, .viewport-footer { padding-left: 15px; padding-right: 15px; }
+  .viewport-footer { flex-wrap: wrap; }
+  .canvas-placeholder { min-height: 290px; }
+  .empty-model { margin: 16px; }
+  .inspector { padding: 16px; }
+}
